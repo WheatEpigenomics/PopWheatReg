@@ -21,3 +21,13 @@ python 04_co_access_analysis.py \
   --gpu-mem auto \
   --device cuda:0 \
   --output demo_coaccess_output.tsv
+
+## Expected output
+
+The script writes a tab-delimited output file with three columns:
+
+- `id1`
+- `id2`
+- `correlation`
+
+Only ACR pairs within the specified genomic window and passing the correlation cutoff are retained.
