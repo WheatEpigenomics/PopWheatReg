@@ -20,8 +20,8 @@ python 04_co_access_analysis.py \
   --cutoff 0.6 \
   --gpu-mem auto \
   --device cuda:0 \
-  --output demo_coaccess_output.tsv```
-
+  --output demo_coaccess_output.tsv
+```
 
 ## Expected output
 
