@@ -67,6 +67,7 @@ Typical dependencies include:
 - standard Unix tools such as `awk`, `paste`, `grep`, and `shuf`
 
 Please ensure these are available in your environment before running the scripts.
+Tested on Linux with Python 3.10.
 
 ## Installation
 
