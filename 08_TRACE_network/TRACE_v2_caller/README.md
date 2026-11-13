@@ -1,4 +1,5 @@
-# TRACE network
+
+# TRACE (Tracing Regulatory Attribution across Chromatin and Expression) network
 
 Construction of the TRACE regulatory network: a TF-centred network that links a
 regulatory SNP to a target gene through three independent route families.
@@ -8,9 +9,10 @@ holds the code.
 The V2-2 rules are the final version used for the csv2 network. Only code is
 shipped; input files and results are not.
 
-## TRACE网络构建规则流程图
-
-<!-- 架构图待补：从六张标准边表到最终 TF–gene 网络的规则流程 -->
+## TRACE framework
+<p align="center">
+  <img width="750" alt="Trace_frame" src="https://github.com/user-attachments/assets/364a0475-97db-4cdb-9169-c27df5f47811" />
+</p>
 
 ## Requirements
 
