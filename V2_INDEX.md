@@ -13,7 +13,7 @@ Only code is shipped. Input data, intermediate files and results are not.
 |---|---|---|---|
 | `01_Population_Genetics` | GATK variant calling, hard filtering, population structure, phylogenetic tree, LD decay and haplotype blocks | `01_call_SNP_and_filter.sh`, `02_pop_structure_and_tree.sh`, `03_LD_decay_and_genome_blocks.sh` | — |
 | `02_Chromatin_Accessibility` | MACS2 peak calling, peak merging, 200-bp window counting, peak x sample matrix | `01_call_peak_and_norm.sh` | — |
-| `03_ACR_Gene_Link` | agLink (ACR-gene Pearson + permutation z-test), ACR co-accessibility, SMR/HEIDI | `00_aglink_main.sh` | `demo/` |
+| `03_agLink_coACR` | agLink (ACR-gene Pearson + permutation z-test), ACR co-accessibility, SMR/HEIDI | `00_agLink_coACR_main.sh` | `demo/` |
 | `04_Molecular_QTLs` | eQTL and caQTL association with TensorQTL, including the subgroup omnibus mode | `01_caQTL_eQTL_main.sh` | `TensorQTL_subgroup_omnibus/demo/` |
 | `05_Phenotype_Association` | GWAS with EMMAX, caWAS and TWAS with PrediXcan | `01_GWAS_caWAS_TWAS_main.sh` | — |
 | `06_Population_Simulations` | Multivariate regression, neutral Wright-Fisher simulations, forward simulations | `*/00_RUN.sh` | `*/demo/` |
