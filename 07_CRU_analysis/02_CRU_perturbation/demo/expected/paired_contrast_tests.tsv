@@ -1,0 +1,3 @@
+contrast	n_CRUs	inside_count	control_count	inside_fraction	control_fraction	difference	inside_only	control_only	both	neither	permutations	permutation_P_two_sided	permutation_P_inside_greater	exact_P_two_sided	exact_log10_P_two_sided	exact_P_inside_greater	exact_log10_P_inside_greater	permutation_Holm_P_two_sided	exact_Holm_P_two_sided
+sentinel_low	8	6	5	0.75	0.625	0.125	2	1	4	1	10000	1	0.503749625037496	1	0	0.5	-0.301029995663981	1	1
+sentinel_high	8	5	4	0.625	0.5	0.125	2	1	3	2	10000	1	0.506249375062494	1	0	0.5	-0.301029995663981	1	1

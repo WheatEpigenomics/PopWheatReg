@@ -1,0 +1,252 @@
+{
+  "version": "T8 frozen rules; configuration organization only",
+  "baseline": {
+    "version": "V11-300kb fixed",
+    "signal": {
+      "bin_bp": 5000,
+      "smooth_bp": [
+        25000,
+        105000,
+        225000
+      ],
+      "active_quantile": 0.25,
+      "min_span_count": 2,
+      "min_endpoint_count": 0.0
+    },
+    "hard_gap": {
+      "hard_gap_min_bp": 100000,
+      "hard_reference_bp": 2000000,
+      "absolute_low_depth": 2,
+      "hard_core_relative": 0.1,
+      "hard_growth_relative": 0.2,
+      "max_hole_bp": 10000,
+      "min_reference_depth": 10,
+      "primary_depth": 0.45,
+      "secondary_parent_min_bp": 1500000,
+      "bin_bp": 5000,
+      "min_cru_bp": 100000,
+      "min_internal": 2,
+      "secondary_depths": [
+        0.4,
+        0.3
+      ]
+    },
+    "A_edge": {
+      "recovery_bp": 100000,
+      "recovery_sigma": 2.0,
+      "core_recovery_fold": 2.0,
+      "recovery_hole_bp": 10000,
+      "edge_min_pairs": 3,
+      "long_trigger_bp": 5000000,
+      "long_depth": 0.45,
+      "peak_padding_bp": 100000,
+      "long_min_pairs": 5,
+      "max_total_cross_fraction": 0.2,
+      "max_cross_density_ratio": 0.5
+    },
+    "primary": {
+      "bin_bp": 5000,
+      "smooth_bp": [
+        25000,
+        105000,
+        225000
+      ],
+      "background_tile_bp": 100000,
+      "background_window_bp": 4100000,
+      "background_sigma": 1,
+      "min_seed_depth": 3,
+      "seed_endpoints": 2,
+      "gap_min_bp": 50000,
+      "gap_fraction": 0.2,
+      "gap_flank_bp": 500000,
+      "bridge_min_links": 4.0,
+      "min_cru_bp": 100000,
+      "min_internal": 2,
+      "shoulder_bp": 500000,
+      "valley_depth": 0.45,
+      "valley_min_width_bp": 25000,
+      "min_prominence": 1,
+      "min_peak_prominence": 0.5,
+      "min_relative_peak_prominence": 0.2,
+      "min_scale_support": 2,
+      "support_flanks_bp": [
+        250000,
+        500000
+      ],
+      "max_local_cross_fraction": 0.5,
+      "max_recursion_depth": 16,
+      "algorithm_sha256": "4dc605096bad3d73caad6a8adb2124f3a48dd046879ced0802e63d4a0d26fb3a",
+      "weighting": "all agLINKs weight=1; PCC/coACR not read; no distance decay"
+    },
+    "shape_settings": {
+      "history_root": "/zlustre4/jzzhang/01_cs_v2/22_CRU/f01_call_CRU/f08_re_try_cru_method",
+      "outdir": "/zlustre4/jzzhang/01_cs_v2/22_CRU/f01_call_CRU/f08_re_try_cru_method/f22_two_stage_density_V8_V9",
+      "v8_high_depth": 0.25,
+      "v8_low_depth": 0.3,
+      "v8_low_snr": 2.5,
+      "v8_linear_gain": 0.1,
+      "v8_max_touch": 0.85,
+      "v9_high_depth": 0.2,
+      "v9_low_depth": 0.25,
+      "v9_low_snr": 2.0,
+      "v9_linear_gain": 0.0,
+      "v9_max_touch": 0.9,
+      "high_snr": 2.0,
+      "min_daughter_bp": 500000,
+      "random_sample_n": 20,
+      "random_seed": 20261108
+    },
+    "minimum_daughter_bp": 300000,
+    "max_rounds": 3,
+    "sources": [
+      {
+        "path": "/zlustre4/jzzhang/01_cs_v2/22_CRU/f01_call_CRU/f08_re_try_cru_method/f08_span_only_control/01_parameters.json",
+        "md5": "813dece9c7dc335ddbdf4d00017115a3"
+      },
+      {
+        "path": "/zlustre4/jzzhang/01_cs_v2/22_CRU/f01_call_CRU/f08_re_try_cru_method/f13_B_route_hard_gap_first/01_parameters.json",
+        "md5": "8667d4a05f3c93c60ba1291fef652f32"
+      },
+      {
+        "path": "/zlustre4/jzzhang/01_cs_v2/22_CRU/f01_call_CRU/f08_re_try_cru_method/f14_B_route_edge_and_long_split/01_parameters.json",
+        "md5": "733a913e146102c15ad4c0920168b57d"
+      },
+      {
+        "path": "/zlustre4/jzzhang/01_cs_v2/22_CRU/f01_call_CRU/f08_re_try_cru_method/f15_Aedge_B145_coACR_support/f01_baseline/01_parameters.json",
+        "md5": "7aff7efffa94596eb5820d5e259222e3"
+      },
+      {
+        "path": "/zlustre4/jzzhang/01_cs_v2/22_CRU/f01_call_CRU/f08_re_try_cru_method/f22_two_stage_density_V8_V9/01_test_settings.json",
+        "md5": "dc10f5ba95c61c6696d8316a01d46d2a"
+      }
+    ]
+  },
+  "low_density_recall": {
+    "T1": {
+      "absolute_floor": 1.5,
+      "background_sigma": 0.0,
+      "close_hole_bp": 10000,
+      "min_territory_bp": 300000,
+      "min_pairs": 4,
+      "min_acrs": 2,
+      "min_genes": 2,
+      "min_endpoint_extent_bp": 100000,
+      "min_internal_span_fraction": 0.6,
+      "min_pairs_per_100kb": 1.0,
+      "min_supported_fraction": 0.8,
+      "max_zero_run_bp": 10000
+    },
+    "T2": {
+      "absolute_floor": 1.0,
+      "background_sigma": 0.5,
+      "close_hole_bp": 10000,
+      "min_territory_bp": 300000,
+      "min_pairs": 4,
+      "min_acrs": 2,
+      "min_genes": 2,
+      "min_endpoint_extent_bp": 100000,
+      "min_internal_span_fraction": 0.6,
+      "min_pairs_per_100kb": 1.0,
+      "min_supported_fraction": 0.8,
+      "max_zero_run_bp": 10000
+    },
+    "T3_rescue": {
+      "absolute_floor": 0.5,
+      "background_sigma": 0.0,
+      "near_zero_background": 0.1,
+      "close_hole_bp": 10000,
+      "min_territory_bp": 300000,
+      "min_pairs": 6,
+      "min_acrs": 3,
+      "min_genes": 3,
+      "min_endpoint_extent_bp": 150000,
+      "min_internal_span_fraction": 0.7,
+      "min_pairs_per_100kb": 1.0,
+      "min_supported_fraction": 0.8,
+      "max_zero_run_bp": 10000
+    }
+  },
+  "support_recall": {
+    "T4": {
+      "min_territory_bp": 300000,
+      "min_pairs": 3,
+      "min_acrs": 2,
+      "min_genes": 1,
+      "min_pairs_per_100kb": 0.25,
+      "min_internal_span_fraction": 0.4,
+      "min_endpoint_extent_bp": 75000,
+      "min_endpoint_bins": 3,
+      "min_local_endpoint_nodes": 2,
+      "min_component_edges": 2,
+      "min_component_nodes": 3,
+      "min_local_1mb_edges": 2,
+      "min_supported_fraction": 0.8,
+      "max_zero_run_bp": 10000
+    },
+    "T5": {
+      "min_territory_bp": 300000,
+      "min_pairs": 2,
+      "min_acrs": 1,
+      "min_genes": 1,
+      "min_pairs_per_100kb": 0.1,
+      "min_internal_span_fraction": 0.25,
+      "min_endpoint_extent_bp": 50000,
+      "min_endpoint_bins": 2,
+      "min_local_endpoint_nodes": 2,
+      "min_component_edges": 2,
+      "min_component_nodes": 3,
+      "min_local_1mb_edges": 2,
+      "min_supported_fraction": 0.8,
+      "max_zero_run_bp": 10000
+    },
+    "T6": {
+      "min_territory_bp": 300000,
+      "min_pairs": 2,
+      "min_acrs": 1,
+      "min_genes": 1,
+      "min_pairs_per_100kb": 0.1,
+      "min_internal_span_fraction": 0.25,
+      "min_endpoint_extent_bp": 50000,
+      "min_endpoint_bins": 2,
+      "min_local_endpoint_nodes": 2,
+      "min_component_edges": 2,
+      "min_component_nodes": 3,
+      "min_local_1mb_edges": 2,
+      "min_supported_fraction": 0.8,
+      "max_zero_run_bp": 10000,
+      "min_near_zero_fraction": 0.8,
+      "max_flank_background": 0.25,
+      "min_peak_excess": 0.8,
+      "min_peak_to_flank_ratio": 1.5
+    },
+    "T6_density": {
+      "absolute_floor": 0.25,
+      "background_sigma": 0.1,
+      "near_zero_background": 0.25,
+      "close_hole_bp": 10000
+    }
+  },
+  "island_rescue": {
+    "min_length_bp": 300000,
+    "raw_noise_floor": 0.05,
+    "fine_noise_floor": 0.1,
+    "background_excess_sigma": 0.05,
+    "close_hole_bp": 10000,
+    "max_zero_run_bp": 10000,
+    "flank_bp": 300000,
+    "min_flank_bp": 100000,
+    "flank_absolute_near_zero": 0.25,
+    "flank_relative_max": 0.25,
+    "min_flank_low_fraction": 0.75,
+    "min_island_flank_contrast": 2.0,
+    "edge_transition_bp": 50000,
+    "min_edge_change": 0.05,
+    "min_sustained_fraction": 0.75,
+    "min_internal_span_fraction": 0.5,
+    "single_aglink_max_bp": 500000,
+    "min_coacr_pairs": 2,
+    "min_coacr_acrs": 3,
+    "min_short_coacr": 1,
+    "min_coacr_extent_bp": 50000
+  }
+}

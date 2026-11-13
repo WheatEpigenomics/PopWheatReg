@@ -1,0 +1,3 @@
+numpy>=1.20
+scipy>=1.6
+# R (optional, figures only): ggplot2 + a cairo-capable device

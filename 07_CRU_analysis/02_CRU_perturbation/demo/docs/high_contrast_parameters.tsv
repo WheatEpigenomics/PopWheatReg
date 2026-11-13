@@ -1,0 +1,12 @@
+parameter	value
+sentinel_selection	same original maximum Q80-Q20 sentinel
+high_quantile	0.8
+normal_quantile	0.5
+high_rule	>=Q80
+normal_rule	<=Q50
+min_group_size	15
+matched_features	same frozen genomic pairs as low contrast
+feature_rows	191
+high_groups_valid	8
+contrast	mean(log2(value+1),high)-mean(log2(value+1),lower_half)
+numpy_version	1.24.4

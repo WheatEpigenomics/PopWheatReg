@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+data/
+out_net/
+demo/out/
+demo/out_net/

@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+out_cru/
+out_score/
+data/
+f01_T8_CRU_caller/demo/data/
+f01_T8_CRU_caller/demo/out*/

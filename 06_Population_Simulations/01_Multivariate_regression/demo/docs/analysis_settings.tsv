@@ -1,0 +1,10 @@
+setting	value
+model_version	no_SNP_20261019
+contexts	2Mb,4Mb
+bootstrap_replicates	9999
+random_seed	20260910
+RNG_uniform	Mersenne-Twister
+RNG_normal	Inversion
+RNG_sample	Rejection
+SNP_density_used	FALSE
+frozen_blocks_per_context	252

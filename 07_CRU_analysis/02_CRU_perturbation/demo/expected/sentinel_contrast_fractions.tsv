@@ -1,0 +1,5 @@
+contrast	endpoint	group	n_CRUs	n_synchronous	n_other	synchronous_fraction	other_fraction	permutation_P_two_sided	permutation_Holm_P_two_sided	exact_P_two_sided	exact_Holm_P_two_sided
+sentinel_low	synchronous_decrease	Inside CRU	8	6	2	0.75	0.25	1	1	1	1
+sentinel_low	synchronous_decrease	Distance-matched controls	8	5	3	0.625	0.375	1	1	1	1
+sentinel_high	synchronous_increase	Inside CRU	8	5	3	0.625	0.375	1	1	1	1
+sentinel_high	synchronous_increase	Distance-matched controls	8	4	4	0.5	0.5	1	1	1	1

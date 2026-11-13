@@ -1,0 +1,7 @@
+##gff-version 3
+1A	IWGSC	gene	53369712	53373259	.	-	.	ID=gene:TraesCS1A03G0169800;biotype=protein_coding;gene_id=TraesCS1A03G0169800;logic_name=gff3_high_conf
+1A	IWGSC	gene	337090325	337091440	.	-	.	ID=gene:TraesCS1A03G0498600;biotype=protein_coding;gene_id=TraesCS1A03G0498600;logic_name=gff3_high_conf
+1A	IWGSC	gene	510124024	510129469	.	+	.	ID=gene:TraesCS1A03G0787300;biotype=protein_coding;gene_id=TraesCS1A03G0787300;logic_name=gff3_high_conf
+1A	IWGSC	gene	523952833	523956829	.	-	.	ID=gene:TraesCS1A03G0829300;biotype=protein_coding;gene_id=TraesCS1A03G0829300;logic_name=gff3_high_conf
+1A	IWGSC	gene	545914083	545915232	.	+	.	ID=gene:TraesCS1A03G0887200;biotype=protein_coding;gene_id=TraesCS1A03G0887200;logic_name=gff3_high_conf
+1A	IWGSC	gene	579160388	579162478	.	-	.	ID=gene:TraesCS1A03G1019000;biotype=protein_coding;gene_id=TraesCS1A03G1019000;logic_name=gff3_high_conf

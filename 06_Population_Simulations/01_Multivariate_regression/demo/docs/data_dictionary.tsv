@@ -1,0 +1,96 @@
+file	field	description	unit_or_scale
+all	context	Genomic context window used to compute background features	2Mb or 4Mb
+data/analysis_blocks.tsv.gz	block_id	Unique block identifier within each context	text
+data/analysis_blocks.tsv.gz	block_name	Original block label including genomic coordinates	text
+data/analysis_blocks.tsv.gz	chrom	Chromosome identifier; categorical fixed effect	text
+data/analysis_blocks.tsv.gz	start	Block start; zero-based inclusive	bp
+data/analysis_blocks.tsv.gz	end	Block end; zero-based exclusive	bp
+data/analysis_blocks.tsv.gz	length_bp	Block length; end minus start; response is log1p(length_bp)	bp
+data/analysis_blocks.tsv.gz	context_start	Context start; zero-based inclusive	bp
+data/analysis_blocks.tsv.gz	context_end	Context end; zero-based exclusive	bp
+data/analysis_blocks.tsv.gz	context_length_bp	Actual context length; context_end minus context_start	bp
+data/analysis_blocks.tsv.gz	tested_gene_count	Number of tested genes whose TSS is assigned to this block	count
+data/analysis_blocks.tsv.gz	aglink_count_gene_block	Unique significant gene-ACR links attributed to the gene's block	count
+data/analysis_blocks.tsv.gz	aglinks_per_tested_gene	Primary agLink variable; aglink_count_gene_block divided by tested_gene_count	links per tested gene
+data/analysis_blocks.tsv.gz	aglinks_same_block_per_tested_gene	Links with gene and ACR in the same block divided by tested_gene_count	links per tested gene
+data/analysis_blocks.tsv.gz	candidate_acr_gene_pair_proxy	Sum of ACR counts within plus/minus 1 Mb of tested-gene TSSs; an opportunity proxy	candidate pairs
+data/analysis_blocks.tsv.gz	mean_local_acr_per_tested_gene	Candidate-pair proxy divided by tested_gene_count	candidate ACRs per tested gene
+data/analysis_blocks.tsv.gz	context_gene_density_per_mb	Gene TSS density in the context	genes per Mb
+data/analysis_blocks.tsv.gz	context_recombination_rate	Overlap-length-weighted mean consensus relative recombination rank	relative rank; not cM/Mb
+data/analysis_blocks.tsv.gz	context_recomb_coverage_fraction	Fraction of context covered by valid recombination consensus	fraction 0-1; analysis requires at least 0.5
+data/analysis_blocks.tsv.gz	context_te_content	Fraction of context covered by the union of TE match annotations	fraction 0-1
+data/analysis_blocks.tsv.gz	context_acr_density_per_mb	ACR midpoint density in the context	ACRs per Mb
+results/nested_models.tsv	stage	Nested model order: baseline; baseline+TE; baseline+TE+agLink	1; 2; 3
+results/nested_models.tsv	model	Nested model label	text
+results/nested_models.tsv	added_predictor	Predictor added relative to the preceding stage	NA for baseline
+results/nested_models.tsv	formula	Actual fitted model formula using standardized terms	text
+all	n_blocks	Number of blocks used for that result	count
+all	R2	Ordinary in-sample coefficient of determination for the stated model	fraction
+results/nested_models.tsv	adjusted_R2	Model R2 adjusted for number of fitted parameters	fraction
+results/nested_models.tsv	step_delta_R2	R2 of current stage minus R2 of preceding stage	fraction; NA for baseline
+results/nested_models.tsv	step_partial_R2	Reduction in residual sum of squares relative to preceding stage	fraction; NA for baseline
+all	LRT_chisq	Twice the log-likelihood difference for nested models	chi-square statistic
+all	LRT_df	Difference in number of fitted parameters	degrees of freedom
+all	LRT_P	Ordinary nested-model likelihood-ratio P value	probability
+all	chromosome_cluster_beta	Coefficient for the newly added standardized predictor	log1p(block-length) units per predictor SD
+all	chromosome_cluster_P	Chromosome-cluster robust t-test or joint F-test P value	probability
+all	wild_bootstrap_B	Number of restricted Webb wild-bootstrap replicates	9999
+all	wild_bootstrap_P	Restricted chromosome-cluster wild-bootstrap P value	probability; minimum resolvable value 0.0001
+results/model_coefficients.tsv	predictor	Human-readable full-model predictor name	text
+all	term	Standardized predictor term; ag_z/gene_z/recomb_z/te_z/acr_z; snp_z in additional SNP-included analyses	text
+results/model_coefficients.tsv	beta	Full-model coefficient; response is not standardized	log1p(block-length) units per predictor SD
+results/model_coefficients.tsv	OLS_SE	Ordinary model standard error	response units
+results/model_coefficients.tsv	OLS_P	Ordinary model coefficient P value	probability
+results/model_coefficients.tsv	chromosome_cluster_SE	Finite-sample-corrected chromosome-cluster standard error	response units
+results/model_coefficients.tsv	cluster_CI_low	Lower 95% confidence bound based on t with G-1 df	response units
+results/model_coefficients.tsv	cluster_CI_high	Upper 95% confidence bound based on t with G-1 df	response units
+results/contributions.tsv	decomposition	Predictor-removal grouping definition	individual; grouped_C; grouped_E
+all	component	Predictor group or display label	text
+results/contributions.tsv	full_R2	R2 of the same full model for this context	fraction
+results/contributions.tsv	reduced_R2	R2 after removing the indicated predictor group	fraction
+all	unique_delta_R2	Full-model R2 minus reduced-model R2 after removing the indicated group	fraction
+all	partial_R2	Residual-sum-of-squares reduction divided by reduced-model residual sum of squares	fraction
+results/sensitivity.tsv	analysis	Primary or alternative agLink representation and adjustment set	text
+results/sensitivity.tsv	delta_R2	Full minus reduced R2 for the stated sensitivity model pair	fraction
+results/sensitivity.tsv	wild_cluster_P	Chromosome-cluster wild-bootstrap P for the stated sensitivity	probability
+results/diagnostics.tsv	diagnostic	Diagnostic family	analysis_QC; VIF; Spearman
+results/diagnostics.tsv	variable_1	Metric or first variable name	text
+results/diagnostics.tsv	variable_2	Second variable for correlations; NA otherwise	text
+results/diagnostics.tsv	value	Diagnostic value; Spearman stores each off-diagonal pair once	metric-dependent
+results/bootstrap_null.tsv.gz	comparison	Restricted null model used for bootstrap	add_TE or add_agLink
+results/bootstrap_null.tsv.gz	iteration	Bootstrap iteration within each context and comparison	1-9999
+results/bootstrap_null.tsv.gz	null_cluster_t	Simulated chromosome-cluster t statistic under the restricted null	t statistic
+plot_data/figure_source_data.tsv	figure	Output figure identifier	ABC; E; F; 4Mb
+plot_data/figure_source_data.tsv	panel	Panel identifier within its figure	A; B; C; E; F; ablation
+plot_data/figure_source_data.tsv	display_order	Bar order; horizontal bars are displayed top to bottom	integer
+plot_data/figure_source_data.tsv	colour_class	Named palette entry used by the unified plotting script	agLink; genomic; TE; other
+all	NA	Not applicable; not a numerical zero	missing-value token
+data/SNP_density_2Mb.tsv.gz	context_snp_count	Original SNP count in the fixed context, recovered and checked against original block/context identity	count
+data/SNP_density_2Mb.tsv.gz	context_snp_density_per_mb	Context SNP count / context_length_bp * 1e6; used in the additional SNP-included F and B panels	SNPs per Mb
+results/model_rows_with_SNP.tsv.gz	snp_z	Standardized log1p(context_snp_density_per_mb) over the original 3641 2-Mb blocks	mean 0, sample SD 1
+results/model_rows_with_SNP.tsv.gz	y,ag_z,gene_z,recomb_z,te_z,acr_z	Saved response and predictor transformations for the additional model; definitions as in METHODS_WITH_SNP.txt	log response / standardized predictors
+results/nested_models_with_SNP.tsv	SNP_density_used	TRUE for each of all three nested stages; primary SNP-excluded tables are separate	boolean
+results/nested_models_with_SNP.tsv	n_chromosomes	Number of original chromosome groups retained	21
+results/nested_models_with_SNP.tsv	observed_cluster_t	Added coefficient / chromosome-cluster SE for that adjacent comparison	t statistic
+results/nested_models_with_SNP.tsv	wild_bootstrap_seed	Original per-comparison RNG seed: TE=20260914, agLink=20260910	integer
+results/nested_models_with_SNP.tsv	ALL shared fields	Definitions of stage, formula, R2, LRT, partial R2 and bootstrap fields match original nested_models.tsv	see existing definitions
+results/model_coefficients_with_SNP.tsv	stage,model	Which nested stage's compact genomic/agLink coefficients are reported	1-3 / text
+results/model_coefficients_with_SNP.tsv	ALL coefficient fields	Same OLS and cluster-inference definitions as primary coefficient table; includes SNP term; intercept/chromosome fitted but omitted	see existing definitions
+results/bootstrap_null_with_SNP.tsv.gz	ALL	Additional SNP-included null draws, context 2Mb, add_TE/add_agLink comparisons, 9999 per comparison	19998 rows of null t statistics
+plot_data/Fig_F_sequential_with_SNP.tsv	ALL	Three rows directly generated from nested_models_with_SNP.tsv with display order and original palette class; sole source of additional F labels	full-precision result values
+docs/SNP_covariate_provenance.tsv	setting,value	Archive/member names and SHA256, checked block count, zero shared-covariate error and original SNP transformation	provenance metadata
+docs/SNP_included_settings.tsv	setting,value	Additional model context, transformations, count, seeds and RNG settings	analysis settings
+docs/SNP_included_validation_report.tsv	check,status	Independent SNP join, transformations, model fits, inference, bootstrap spot replay and source/plot consistency checks	PASS/FAIL
+results/contributions_with_SNP.tsv	removed_term	Single standardized predictor removed from the same SNP-included full model	ag_z; acr_z; gene_z; recomb_z; snp_z; te_z
+results/contributions_with_SNP.tsv	SNP_density_in_full_model	TRUE for all rows; the SNP-removal reduced model omits SNP	boolean
+results/contributions_with_SNP.tsv	chromosome_retained	Chromosome fixed effects retained in every full and reduced fit	boolean
+results/contributions_with_SNP.tsv	full_formula,reduced_formula	Exact formulas before and after removing the named predictor	R formula text
+results/contributions_with_SNP.tsv	full_rank,reduced_rank	Number of linearly independent design columns including intercept and chromosome terms	count
+results/contributions_with_SNP.tsv	full_RSS,reduced_RSS	Sum of squared residuals from the corresponding model	squared log1p(length_bp) units
+results/contributions_with_SNP.tsv	total_SS	Sum of squared centered responses; same denominator for all R2 calculations	squared log1p(length_bp) units
+results/contributions_with_SNP.tsv	ALL shared fields	Context, decomposition, component, block/chromosome counts, full/reduced R2, unique delta R2, partial R2 and ordinary LRT; no wild-bootstrap P	see existing definitions
+plot_data/Fig_B_drop_one_with_SNP.tsv	ALL result fields	Six rows copied from contributions_with_SNP.tsv at full precision; sole source of B bar values	full-precision result values
+plot_data/Fig_B_drop_one_with_SNP.tsv	display_order	Top-to-bottom order descending by unrounded unique delta R2	1-6
+plot_data/Fig_B_drop_one_with_SNP.tsv	colour_hex	Reference-style fill colour for each predictor	RGB hex
+plot_data/Fig_B_drop_one_with_SNP.tsv	value_label	Unique delta R2 rounded to four decimals for figure labels	fraction
+docs/SNP_drop_one_validation_report.tsv	check,status	Independent raw-input reconstruction, matrix fits, residualization identity and figure/result consistency	PASS/FAIL

@@ -1,0 +1,3 @@
+endpoint	group	n_unique_CRUs	n_observations	n_decrease	n_increase	n_not_decreased	n_not_increased	n_synchronous	n_other	synchronous_fraction	other_fraction	permutation_P_two_sided	permutation_Holm_P_two_sided	exact_P_two_sided	exact_Holm_P_two_sided
+synchronous_change_pooled	Inside CRU	8	16	6	5	2	3	11	5	0.6875	0.3125	0.749125087491251	1	0.75	1
+synchronous_change_pooled	Distance-matched controls	8	16	5	4	3	4	9	7	0.5625	0.4375	0.749125087491251	1	0.75	1

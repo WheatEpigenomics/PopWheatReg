@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*/output/
+*/output_demo/
+*/output_full/
+*/.cache/

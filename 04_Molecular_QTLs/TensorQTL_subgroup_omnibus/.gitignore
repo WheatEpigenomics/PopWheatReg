@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.pyo
+demo/data/
+demo/out/
+*.tmp_parts/

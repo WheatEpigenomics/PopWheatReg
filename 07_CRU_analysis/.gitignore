@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+02_CRU_perturbation/output/
+02_CRU_perturbation/output_demo/
+02_CRU_perturbation/output_full/
+02_CRU_perturbation/.cache/

@@ -1,0 +1,10 @@
+setting	value
+source_archive	publication_submission_backup_before_cleanup_20261019.tar.gz
+source_archive_sha256	89739e72fbdb2fb569878920d5d2aa65ac63a79b6198e142d55f833f6db6aeb9
+source_member	publication_submission/Table0_complete_case_blocks.tsv
+source_member_sha256	3e2337e3ee3c0f5f967270a8403d5380844df4b28bd424c16582b0331d81ae48
+context	2Mb
+n_matched_blocks	3641
+maximum_common_covariate_error	0.0
+transform	z(log1p(context_snp_density_per_mb))
+join_key	block_id with chromosome and coordinate checks

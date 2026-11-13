@@ -1,0 +1,2 @@
+##gff-version 3
+1A	IWGSC	gene	40098	70338	.	-	.	ID=gene:TraesCS1A03G0000200;biotype=protein_coding;gene_id=TraesCS1A03G0000200;logic_name=gff3_high_conf

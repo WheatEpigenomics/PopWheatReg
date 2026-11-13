@@ -1,0 +1,9 @@
+context	analysis	n_blocks	delta_R2	partial_R2	chromosome_cluster_P	wild_cluster_P
+2Mb	PRIMARY: log1p(agLinks/tested gene), genomic covariates + chromosome	252	0.030253132005344	0.0452656490776089	0.015517324883368	0.0135
+2Mb	Two-part agLink, same genomic covariates + chromosome	252	0.107176434984345	0.160360616366384	3.22169944931775e-05	2e-04
+2Mb	Same-block agLinks/tested gene, same genomic covariates + chromosome	252	0.124579725431902	0.186399944726027	2.23262984382273e-07	1e-04
+2Mb	STRINGENT: two-part + tested-gene/candidate-pair opportunity splines	252	0.00343336063162603	0.0249819376052795	0.297055836431208	0.2913
+4Mb	PRIMARY: log1p(agLinks/tested gene), genomic covariates + chromosome	252	0.0359652546787073	0.0523198579808057	0.00784386938452086	0.0062
+4Mb	Two-part agLink, same genomic covariates + chromosome	252	0.114857027943056	0.167086357201186	1.84624333508513e-05	2e-04
+4Mb	Same-block agLinks/tested gene, same genomic covariates + chromosome	252	0.139984524494186	0.203640166223611	5.75181749745957e-07	1e-04
+4Mb	STRINGENT: two-part + tested-gene/candidate-pair opportunity splines	252	0.00331426898079179	0.0242867422771443	0.207198898486592	0.2012
