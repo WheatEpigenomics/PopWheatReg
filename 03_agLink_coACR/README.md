@@ -1,7 +1,7 @@
 # ACR-gene link
 
 ACR-gene association (agLink), ACR co-accessibility, and the SMR/HEIDI test that
-connects caQTL to eQTL. Four scripts; `00_aglink_main.sh` holds the runnable
+connects caQTL to eQTL. Four scripts; `00_agLink_coACR_main.sh` holds the runnable
 blocks and a demo.
 
 ## Scripts
