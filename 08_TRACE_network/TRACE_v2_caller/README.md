@@ -9,11 +9,6 @@ holds the code.
 The V2-2 rules are the final version used for the csv2 network. Only code is
 shipped; input files and results are not.
 
-## TRACE framework
-<p align="center">
-  <img width="750" alt="Trace_frame" src="https://github.com/user-attachments/assets/364a0475-97db-4cdb-9169-c27df5f47811" />
-</p>
-
 ## Requirements
 
 - Python 3.8+ with `duckdb` and `pandas`
