@@ -24,4 +24,6 @@ This repository contains custom scripts and analysis pipelines used to:
 
 Together, these analyses provide a framework for investigating how noncoding regulatory variation shapes gene expression and complex traits in polyploid crop genomes. The scripts in this repository support reproducible population-scale regulatory analyses and may be adapted for similar studies in other plant species.
 
+**For detailed code organization, usage instructions and software requirements, see [V2 Code Index](V2_INDEX.md).**
+
 If you have any questions, requests, or comments, we kindly invite you to contact us at zhang_jiazi@163.com, luzefu@caas.cn.
